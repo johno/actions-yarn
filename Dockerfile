@@ -10,6 +10,8 @@ LABEL com.github.actions.description="Wraps the yarn CLI and adds git for lerna"
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="purple"
 
+RUN yarn config set unsafe-perm true
+
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git
